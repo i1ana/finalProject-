@@ -4,6 +4,7 @@
 	<title>Insert Title Here</title>
 	<script type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/angular.js/1.5.0/angular.js"></script>
 	<script type="text/javascript" src="https://js.stripe.com/v2/"></script>
+	<script src="https://cdnjs.cloudflare.com/ajax/libs/jquery.isotope/2.2.2/isotope.pkgd.js"></script>
 	<link rel="stylesheet" type="text/css" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.6/css/bootstrap.min.css">
 	<link rel="stylesheet" type="text/css" href="../CSS/main.css">
 </head>
@@ -11,9 +12,10 @@
 
 <!-- HEADER SECTION  -->
 <div class="page-header">
-	<h1> TITLE </h1>
+	
+<h1 class="title"> TITLE </h1>
 </div>
-
+<!-- NAV BAR --> 
 
 <nav class="navbar navbar-default navbar-fixed-top">
   <div class="container-fluid">
@@ -29,7 +31,7 @@
     </div>
 
     <!-- Collect the nav links, forms, and other content for toggling -->
-    <div class="collapse navbar-collapse" id="`">
+    <div class="collapse navbar-collapse navbar-right" id="navBarHeader">
       <ul class="nav navbar-nav">
         <li class="active"><a href="#">Sign UP <span class="sr-only">(current)</span></a></li>
         <li><a href="#">Login</a></li>
@@ -57,7 +59,7 @@
 <!-- Area with video/picture and text  -->
 <div class="jumbotron">
   <div class="container image">
-    <img src="./Photos/seniorcoffee.jpeg">
+    <img src="/Photos/seniorcoffee.jpeg">
    <!--  <h2> <span> Testing font on photo: <br /> BLAH BKAH BLAAAAH </span> </h2> -->
   </div>
 </div>
@@ -73,8 +75,11 @@
 <button>Log In</button> </div>
 
 <!-- FOOTER SECTION --> 
-<div> THIS IS THE FOOTER </div>
-
-<script type="text/javascript" src="./index.js"></script>
+<div class='footer'> 
+	<div class='container'>
+	<p>THIS IS THE FOOTER </p>
+	</div>
+</div>
+<script type="text/javascript" src=""></script>
 </body>
 </html>

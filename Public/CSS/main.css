@@ -1,16 +1,10 @@
 
 .navbar {
-	padding: 40px;
+	padding: 50px;
+	height: 50px;
 }
 
-.image {
-	position: relative;
-	width: 100%;
+.title {
+	margin-top: 100px;
 }
 
-.image h2 {
-	position: absolute;
-	top: 200px;
-	left: 0;
-	width: 100%;
-}
