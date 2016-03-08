@@ -2,6 +2,9 @@ var express = require('express')
 var bodyParser = require('body-parser')
 var logger = require('morgan')
 var passPort = require('passport')
+// var mongoose = require('mongoose')
+
+// mongoose.connect('mongodb://localhost/')
 
 //Express App 
 var app = express()
@@ -19,6 +22,10 @@ app.use(express.static(__dirname + '/public'))
 
 app.get('/', function(req, res){
 	res.sendFile('/HTML/index.html', {root: './public'})
+})
+
+app.get('/', function(req, res){
+	res.sendFile('/HTML/userPage.html', {root: './public'})
 })
 
 

@@ -3,83 +3,98 @@
 <head>
 	<title>Narratus.co</title>
 	<script type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/angular.js/1.5.0/angular.js"></script>
-	<script type="text/javascript" src="https://js.stripe.com/v2/"></script>
-	<script src="https://cdnjs.cloudflare.com/ajax/libs/jquery.isotope/2.2.2/isotope.pkgd.js"></script>
+	<!-- <script type="text/javascript" src="https://js.stripe.com/v2/"></script> -->
 	<link rel="stylesheet" type="text/css" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.6/css/bootstrap.min.css">
 	<link rel="stylesheet" type="text/css" href="../CSS/main.css">
 </head>
 <body>
 
 <!-- HEADER SECTION  -->
-<div class="page-header">
-	
-<h1 class="title"> Narratus</h1>
+<div>
+	<h1 class="title"> Narratus</h1>
 </div>
-<!-- NAV BAR --> 
 
-<nav class="navbar navbar-default navbar-fixed-top">
-  <div class="container-fluid">
-    <!-- Brand and toggle get grouped for better mobile display -->
-    <div class="navbar-header">
-      <button type="button" class="navbar-toggle collapsed" data-toggle="collapse" data-target="navBarCollapse" aria-expanded="false">
-        <span class="sr-only">Toggle navigation</span>
-        <span class="icon-bar"></span>
-        <span class="icon-bar"></span>
-        <span class="icon-bar"></span>
-      </button>
-      <a class="navbar-brand" href="#">Narratus</a>
-    </div>
-
-    <!-- Collect the nav links, forms, and other content for toggling -->
-    <div class="collapse navbar-collapse navbar-right" id="navBarHeader">
-      <ul class="nav navbar-nav">
-        <li class="active"><a href="#">Sign UP <span class="sr-only">(current)</span></a></li>
-        <li><a href="#">Login</a></li>
-        <li class="dropdown">
-          <a href="#" class="dropdown-toggle" data-toggle="dropdown" role="button" aria-haspopup="true" aria-expanded="false">Dropdown <span class="caret"></span></a>
-          <ul class="dropdown-menu">
-            <li><a href="#">Login</a></li>
-            <li><a href="#">Signup</a></li>
-            <li><a href="#">Something else here</a></li>
-          </ul>
-        </li>
-      </ul>
-      <form class="navbar-form navbar-left" role="search">
-        <div class="form-group">
-          <input type="text" class="form-control" placeholder="Search">
-        </div>
-        <button type="submit" class="btn btn-default">Submit</button>
-      </form>
-    </div><!-- /.navbar-collapse -->
-  </div><!-- /.container-fluid -->
-</nav>
 
 
 
 <!-- Area with video/picture and text  -->
 <div class="jumbotron">
-  <div class="container image">
-    <img src="/Photos/seniorcoffee.jpeg">
+  <div class="container">
+    <img class="imageTop" src="/Photos/seniorcoffee.jpeg">
    <!--  <h2> <span> Testing font on photo: <br /> BLAH BKAH BLAAAAH </span> </h2> -->
+   <button class="btn btn-default btn-lg" type="submit"> Start Writing </button>
   </div>
 </div>
 
 
 <!-- Featured Stories area -->
-<h3> Featured Stories </h3>
-<div> Insert stories here </div>
+<div class="container">
+  <article class="main">
+    <aside class="post-meta">
+      <div class="post-info">
+        <p><a href="http://www.filipwieland.com/" class="author-name">{{author}}</a></p>
+        <p class="text-muted">Written on <strong>{{date}}</strong></p>
+      </div>
+    </aside>
+    <h1>{{Story Title}}</h1>
+    <p>In this article, I will show that it <i>is</i> possible to create a Medium-style article with beautiful typography and <b>not</b> have it take up over a megabyte on the wire. I will include fonts and other CSS bells and whistles, but <a href="#">not a smidgen of JS</a> outside of embedded content. Because when you run something like Medium, you should be able to get all the analytics you need from your goddamned server logs.</p>
+    <p>Something to add another paragraph here.</p>
+    <h2>Why do I bother</h2>
+    <p>I bother because for some reason Medium, the "publishing platform", is slow to load even for really simple, text-only documents. I believe the issue is that it loads unnecessary scripts that don't add to much. And they also strongly recommend using an app on mobile devices - why is this even necessary to view text files with an occasional image?</p>
+    <ul>
+      <li>This is a normal, unordered list. It's rendered by your browser.</li>
+      <li>It means that the bullets might look a bit different in different browsers, or the margins might not <i>quite</i> match up.</li>
+      <li>But this is fine, because at least I am not wasting CSS on doing my own list bullets.</li>
+    </ul>
+    <h2>Some other heading</h2>
+    <blockquote>Someone important said this. <cite>Simone Importe-Ante</cite></blockquote>
+    <h3>Recipe for total panic:</h3>
+    <ol>
+      <li>Cats</li>
+      <li>Dogs</li>
+      <li>Living together</li>
+    </ol>
+    <h2>Some code</h2>
+    <pre>#include &lt;stdio.h>
+
+int main(int argc, char* argv[]) {
+  puts(<strong>"Hello, world!"</strong>);
+  return 0;
+}</pre>
+    <p>I'm fine with this code rendering with different fonts on different systems.</p>
+    <h2>What about images</h2>
+    <p class="image-p">
+      <img src="/Photos/writing.jpeg" alt="A notebook" />
+      <span class="caption">Write a story now</span>
+    </p>
+    <h2>Conclusion</h2>
+  </article>
+</div>
 
 
-<div> <button >$$$$ DONATE $$$$ </button> </div>
-<div> <button>Sign up</button>
-<button>Log In</button> </div>
+
+
+
+
+
+<!-- BUTTONS  -->
+
+
+<div class="bottomButton"> 
+	<button class="btn btn-default btn-lg" type="submit">$$$$ DONATE $$$$</button> 
+</div>
+<div class="bottomButton"> 
+	<button class="btn btn-default btn-lg" type="submit">Sign up</button>
+	<button class="btn btn-default btn-lg" type="submit">Log In</button> 
+</div>
 
 <!-- FOOTER SECTION --> 
+
 <div class='footer'> 
 	<div class='container'>
 	<p>THIS IS THE FOOTER </p>
 	</div>
 </div>
-<script type="text/javascript" src=""></script>
+<script type="text/javascript" src="/JS/app.js"></script>
 </body>
 </html>
