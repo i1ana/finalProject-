@@ -6,3 +6,4 @@ var userSchema = new schema({
 	stories: [storySchema],
 })
 
+return userSchema

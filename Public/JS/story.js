@@ -4,3 +4,5 @@ var storySchema = new schema({
 	created: {type: date},
 	author: {type: schema.objectID, ref: 'user'}
 })
+
+return storySchema

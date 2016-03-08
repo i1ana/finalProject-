@@ -4,11 +4,11 @@ var logger = require('morgan')
 var passPort = require('passport')
 var mongoose = require('mongoose')
 
-mongoose.connect('mongodb://localhost/storyapp')
-
 //Express App 
 var app = express()
 
+//Mongoose Connect 
+mongoose.connect('mongodb://localhost/storyapp')
 
 //Application Configuration 
 app.use(logger('dev'))
