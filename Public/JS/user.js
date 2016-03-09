@@ -1,4 +1,6 @@
-var userSchema = new schema({
+var mongoose = require('mongoose')
+
+var userSchema = new moongose.Schema({
 	fName: {type: string},
 	lName: string,
 	email: string,
@@ -6,4 +8,4 @@ var userSchema = new schema({
 	stories: [storySchema],
 })
 
-return userSchema
+module.export = mongoose.model('user', userSchema)

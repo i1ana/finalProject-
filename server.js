@@ -20,7 +20,8 @@ app.use(express.static(__dirname + '/public'))
 //Routes 
 
 app.get('/', function(req, res){
-	res.sendFile('/HTML/index.html', {root: './public'})
+	console.log('Yo')
+	res.sendFile('/HTML/shell.html', {root: './public'})
 })
 
 

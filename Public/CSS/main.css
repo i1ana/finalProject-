@@ -2,7 +2,7 @@
 //Header 
 
 .title {
-	font-size: 4.5em;
+	font-size: 5em;
 	font-weight: 700; 
 }
 
@@ -14,17 +14,17 @@
 
 //Articles 
 
-html { 
+/*html { 
 	margin: 0; padding: 0 
-}
+}*/
 body {
   margin: 0;
   font: normal 18px/150% Merriweather, Lucida Grande, Georgia, serif;
-  font-size: 1.5em; 
+ /* font-size: 1.5em; */
   color: #222;
 }
-* { box-sizing: border-box; }
-h1, h2, h3, h4, h5, h6 {
+/** { box-sizing: border-box; }*/
+/*h1, h2, h3, h4, h5, h6 {
   font-family: Lato, Helvetica Neue, Arial, sans-serif;
   font-weight: 300;
   margin: 1.5em 0 0.25em;
@@ -38,7 +38,7 @@ h1 {
 }
 h1 + p {
   margin-top: 1.75em;
-}
+}*/
 
 h2 {
 	font-size: 3em;
