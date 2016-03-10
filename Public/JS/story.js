@@ -1,10 +1,10 @@
 var mongoose = require('mongoose')
 
 var storySchema = new mongoose.Schema({
-	title: {type: string},
-	body: string,
-	created: {type: date},
-	author: {type: mongoose.Schema.ObjectId, ref: 'user'}
+	title: String,
+	body: String,
+	created: Date,
+	author: String
 })
 
 module.exports = mongoose.model('story', storySchema)

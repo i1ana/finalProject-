@@ -1,31 +1,25 @@
 
 
 <!-- HEADER SECTION  -->
-<div>
-	<h1 class="title"> Narratus</h1>
-</div>
+
 
 
 
 
 <!-- Area with video/picture and text  -->
-<div class="jumbotron">
-  <div class="container">
-    <img class="imageTop" src="/Photos/seniorcoffee.jpeg">
-   <!--  <h2> <span> Testing font on photo: <br /> BLAH BKAH BLAAAAH </span> </h2> -->
-   <button class="btn btn-default btn-lg" type="submit"> Start Writing </button>
+  <div class="module">
+  	<h1 class="title">Narratus</h1>
+   <button class="btn btn-default btn-lg" type="submit"> <a href="./HTML/storySubmit.html"> Start Writing </a> </button>
   </div>
-</div>
-
 
 <!-- Featured Stories area -->
 <div class="container">
 	  <article class="page current">
 	    <aside class="post-meta">
 	      <div class="post-info">
-	        <p class="author-name">{{author}}</p>
+	        <p class="author-name">Written by {{author}}</p>
 	        <p class="text-muted">Written on <strong>{{date}}</strong></p>
-	        <input onclick='responsiveVoice.speak("Hello reader!", "UK English Male");' type='button' value='Click Button to Hear Story!' />
+	        <input onclick='responsiveVoice.speak("Tom you beautiful beast", "UK English Male");' type='button' value='Click Button to Hear Story!' />
 	      </div>
 	    </aside>
 	    <h1>{{Title}}</h1>

@@ -29,6 +29,8 @@ angular.module('storyTelling')
 			
 	})
 
+
+//Controllers 
 angular.module('storyTelling')
 	.controller('homeController', ['$scope', homeController])
 
@@ -36,10 +38,24 @@ angular.module('storyTelling')
 	.controller('userController', ['$scope', userController])
 
 angular.module('storyTelling')
-	.controller('storyController', ['$scope', storyController])
+	.controller('storyController', ['$scope', '$http', function($scope, $http){
+			$scope.storySubmit=function(){
+
+				$http.post('/api/stories', $scope.user)
+					.then(function(dataFromServer){
+					$scope.stories = dataFromServer.data
+					$scope.newStory = {}
+				})
+	
+			}	
+	}])
+	
 
 angular.module('storyTelling')
 	.controller('navbarController', ['$scope', navbarController])
+
+
+//Functions 
 
 function homeController($scope){
 	console.log('Here is a story')
@@ -56,3 +72,5 @@ function storyController($scope){
 function navbarController($scope){
 	console.log('Navbar nagivating')
 }
+
+
