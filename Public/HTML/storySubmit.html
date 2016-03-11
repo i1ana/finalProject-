@@ -1,27 +1,33 @@
-<navbar 
+<h1> Write a Story Here: </h1>
+
+<div ng-controller="storyController">
+	<form ng-submit="storySubmit()"> 
+		<div class="form-group">
+		<label for="exampleName"> Name </label>
+		<input ng-model="user.name" type="name" class="form-control" id="exampleName" placeholder="Name">
+		</div>
+		<div class="form-group">
+		<label for="exampleEmail"> Email Address </label>
+		<input ng-model="user.email" type="email" class="form-control" id="exampleEmail" placeholder="Email">
+		</div>
+		<div class="form-group">
+		<label for="exampleTitle"> Title </label>
+		<input ng-model="user.story.title" type="title" class="form-control" id="exampleTitle" placeholder="Title">
+		</div>
+		<div class="form-group">
+		<div> <label for="exampleStory"> Write Story Here: </label> </div>
+		<textarea ng-model="user.story.story" class="story-form" rows="3"></textarea>
+		</div>
+		<button ng-click= "storyForm.story." type="submit" class="btn btn-default btn-lg"> Submit </button>
+	</form>
+
+<!-- SIGN UP AND DONATE  -->
+
+	<h2> Want to Sign Up now? </h2>
 
 
-<form ng-submit="storySubmit()"> 
-	<div class="form-group">
-	<label for="exampleName"> Name </label>
-	<input ng-model="user.name" type="name" class="form-control" id="exampleName" placeholder="Name">
+	<div>
+		<button class="btn btn-default btn-lg" type="submit">DONATE</button>
 	</div>
-	<div class="form-group">
-	<label for="exampleEmail"> Email Address </label>
-	<input ng-model="user.email" type="email" class="form-control" id="exampleEmail" placeholder="Email">
-	</div>
-	<div class="form-group">
-	<label for="exampleTitle"> Title </label>
-	<input ng-model="user.story.title" type="title" class="form-control" id="exampleTitle" placeholder="Title">
-	</div>
-	<div class="form-group">
-	<div> <label for="exampleStory"> Write Story Here: </label> </div>
-	<textarea ng-model="user.story.story" class="story-form" rows="3"></textarea>
-	</div>
-	<button type="submit" class="btn btn-default btn-lg"> Submit </button>
-</form>
 
-
-<div>
-	<button class="btn btn-default btn-lg" type="submit">DONATE</button>
 </div>

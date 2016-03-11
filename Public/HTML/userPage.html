@@ -1,26 +1,32 @@
 
 
+<div ng-controller="userController">
+
 <!-- USER INFO  -->
-<h2> Your Info: </h2>
-<div class="media"> 
-	<div class="media-left media-top">
-		<img src="http://placehold.it/64x64"> 
-	</div>
+	<h2> Your Info: </h2>
+	<div class="media" ng-repeat="users in user track by $index"> 
+		<div class="media-left media-top">
+			<img src="http://placehold.it/64x64"> 
+		</div>
 	<div class="media-body">
-	<p> Name: {{}} </p>
-	<p> Email Address: {{}} </p>
-
-<!-- STORY INFO -->
-
-	<p> Submitted Stories: </p>
-	<p> Favorite Stories: </p>
+		<div>
+		<p ng-model="user.name" > Name: {{users.name}} </p>
+		<p ng-model="user.email"> Email Address: {{users.email}} </p>
+		</div>
+	<!-- STORY INFO -->
+		<div>
+			<p ng-model="user.story.story"> Submitted Stories: {{users.story.story}}</p>
+		</div>
+		<div>
+			<p> Favorite Stories: </p>
+		</div>
 	</div>
-</div>
 <!-- FOOTER AREA  -->
-<div>
-	<button class="btn btn-default btn-lg" type="submit">DONATE</button>
-</div>
-<div>
-	<button class="btn btn-default btn-lg" type="submit">Log Out</button> 
-</div>
+	<div>
+		<button class="btn btn-default btn-lg" type="submit">DONATE</button>
+	</div>
+	<div>
+		<button class="btn btn-default btn-lg" type="submit">Log Out</button> 
+	</div>
 
+</div>
