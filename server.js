@@ -31,8 +31,6 @@ app.use(bodyParser.json())
 app.use(bodyParser.urlencoded({extended: true}))
 app.use(express.static(__dirname + '/Public'))
 
-
-
 app.isAuthenticated = function(req, res, next){
     // If the current user is logged in...
     if(req.isAuthenticated()){
@@ -44,7 +42,6 @@ app.isAuthenticated = function(req, res, next){
     res.redirect('/');
 }
 
-
 app.isAuthenticatedAjax = function(req, res, next){
     // If the current user is logged in...
     if(req.isAuthenticated()){
@@ -54,9 +51,6 @@ app.isAuthenticatedAjax = function(req, res, next){
     // If not, redirect to login
     res.send({error:'not logged in'});
 }
-
-
-
 
 //Routes 
 
@@ -88,9 +82,9 @@ app.get('/api/stories/:id', function(req, res){
 //Reading all stories
 app.get('/api/stories', function(req, res){
 	console.log('Reading all stories')
-	console.log(db.Story.findOne({}, '', function(err, story){
-		console.log(story, err)
-	res.send(story)
+	console.log(db.Story.find({}, '', function(err, stories){
+		console.log(stories, err)
+	res.send({stories: stories})
 	}))
 
 })
@@ -162,10 +156,11 @@ app.post('api/users/:id', app.isAuthenticatedAjax, function(req, res){
 
 //Signup 
 app.post('/signup', function(req, res){
-    bcrypt.genSalt(11, function(error, salt){
+    bcrypt.genSalt(7, function(error, salt){
         bcrypt.hash(req.body.password, salt, function(hashError, hash){
             var newUser = new db.User({
                 username: req.body.username,
+                email: req.body.email,
                 password: hash,
             });
             newUser.save(function(saveErr, user){
@@ -196,15 +191,12 @@ app.post('/login', function(req, res, next){
 })
 
 
-
 // GET request handler on server to check if someone is logged in
 
 	app.get('/api/me', function(req, res){
 	    // Return the logged in user (or undefined if they are not logged in)
 	    res.send({user:req.user})
 	})
-
-
 
 
 //Creating Server and Listening
