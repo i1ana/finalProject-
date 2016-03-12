@@ -16,6 +16,7 @@ var storySchema = new mongoose.Schema({
 	body: {type: String, required: true},
 	created: {type: Date, required: true},
 	author: {type: String, required: true},
+	likes: {type: Number, default: 0},
 })
 
 var Story = mongoose.model('story', storySchema)

@@ -12,7 +12,6 @@
 .writeButton {
   text-align: center;
   font-size: 1em;
-  
 }
 
 /*//Testing text on photo */
@@ -162,6 +161,7 @@ article a:hover, article a:active {
 .navbar-default{
   opacity: 0.7;
   color: #000;
+  background-color: #004D40; 
 }
 
 .navbar-default:hover {

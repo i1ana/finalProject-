@@ -101,6 +101,8 @@ app.post('/api/stories', app.isAuthenticatedAjax, function(req, res){
         })
         newStory.save(function(saveErr, user){
             if ( saveErr ) { res.send({ err:saveErr }) 
+         	} else {
+         		res.send({success: 'success'})
          	}
         }) 	
      })

@@ -6,7 +6,8 @@ angular.module('storyTelling')
 		function homeController($scope, $http){
 			console.log('Here is a story')
 
-			$scope.stories = []
+			$scope.likes = 0
+	
 
 			$http.get('/api/stories')
 		    .then(function(returnData){
@@ -18,4 +19,8 @@ angular.module('storyTelling')
 		            console.log('No user')
 		        }
 		    })
-		}
+
+		    $scope.likes = function(index,story) {
+				story.likes++
+			}
+	}

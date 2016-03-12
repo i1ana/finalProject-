@@ -9,12 +9,12 @@
 <!-- Area with video/picture and text  -->
 	  <div class="module">
 	  	<h1 class="title">Narratus</h1>
-	   <button class="btn btn-default btn-lg fixed-bottom writeButton" type="submit"> <a href="./HTML/storySubmit.html"> Start Writing </a> </button>
+	   <button class="btn btn-default btn-lg fixed-bottom writeButton" type="submit"> <a href="/#storySubmit"> Start Writing </a> </button>
 	  </div>
 
 <!-- Featured Stories area -->
 
-<input onclick='responsiveVoice.speak("Devon, please shower more.", "UK English Male");' type='button' value='Click Button to Hear Story!' />
+<input onclick='responsiveVoice.speak({{story.body}}, "UK English Male");' type='button' value='Click Button to Hear Story!' />
 
 
 	<div ng-repeat="story in stories">
@@ -24,9 +24,11 @@
 			    	<h2>{{story.title}}</h2>
 			        <p class="author-name">Written by {{story.author}}</p>
 			        <p>Written on <strong>{{story.created}}</strong></p>
+
 			    </div>
 		    </aside>
 		    <div> {{story.body}} </div>
+		     <span class="badge glyphicon glyphicon-search" aria-hidden="true" ng-click="likes($index, story)"> {{story.likes}} </span>
 		</article>
 	</div>
 		    <p>In this article, I will show that it <i>is</i> possible to create a Medium-style article with beautiful typography and <b>not</b> have it take up over a megabyte on the wire. I will include fonts and other CSS bells and whistles, but <a href="#">not a smidgen of JS</a> outside of embedded content. Because when you run something like Medium, you should be able to get all the analytics you need from your goddamned server logs.</p>

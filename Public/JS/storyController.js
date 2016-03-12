@@ -5,7 +5,7 @@ angular.module('storyTelling')
 			console.log('Dis where you enter stury')
 
 			$scope.storySubmit=function(){
-				console.log($scope.storyForm)
+				console.log("I am working", $scope.storyForm)
 				$http({
 					method: 'POST',
 					url: '/api/stories',
@@ -14,14 +14,6 @@ angular.module('storyTelling')
 					if( returnData.data.success) $location.url('/userPage')
 				})
 			}
-
-		
-
-			// $scope.date = function() {
-			// 	var d = new Date()
-			// 	d.getFullYear()
-			// 	return d
-			// }
 
 
 		}
