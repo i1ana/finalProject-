@@ -24,6 +24,11 @@ angular.module('storyTelling')
 				controller: 'navbarController'
 			})
 
+			.when('/login', {
+				templateUrl: '/HTML/login.html',
+				controller: 'loginController'
+			})
+
 			
 	}])
 

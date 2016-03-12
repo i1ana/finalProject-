@@ -4,21 +4,21 @@
 	<form ng-submit="storySubmit()"> 
 		<div class="form-group">
 		<label for="exampleName"> Name </label>
-		<input ng-model="user.name" type="name" class="form-control" id="exampleName" placeholder="Name">
+		<input ng-model="storyForm.name" type="name" class="form-control" id="exampleName" placeholder="Name">
 		</div>
 		<div class="form-group">
 		<label for="exampleEmail"> Email Address </label>
-		<input ng-model="user.email" type="email" class="form-control" id="exampleEmail" placeholder="Email">
+		<input ng-model="storyForm.email" type="email" class="form-control" id="exampleEmail" placeholder="Email">
 		</div>
 		<div class="form-group">
 		<label for="exampleTitle"> Title </label>
-		<input ng-model="user.story.title" type="title" class="form-control" id="exampleTitle" placeholder="Title">
+		<input ng-model="storyForm.title" type="title" class="form-control" id="exampleTitle" placeholder="Title">
 		</div>
 		<div class="form-group">
 		<div> <label for="exampleStory"> Write Story Here: </label> </div>
-		<textarea ng-model="user.story.story" class="story-form" rows="3"></textarea>
+		<textarea ng-model="storyForm.body" class="story-form" rows="3"></textarea>
 		</div>
-		<button ng-click= "storyForm.story." type="submit" class="btn btn-default btn-lg"> Submit </button>
+		<button type="submit" class="btn btn-default btn-lg"> Submit </button>
 	</form>
 
 <!-- SIGN UP AND DONATE  -->

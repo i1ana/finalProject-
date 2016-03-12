@@ -1,23 +1,21 @@
 angular.module('storyTelling')
-	.controller('storyController', ['$scope', '$http', 'storyController', function($scope, $http, storyController){
-			console.log('Testing')
+	.controller('storyController', ['$scope', '$http', storyController])
 
-			function storyController($scope){
+			function storyController($scope, $http){
 			console.log('Dis where you enter stury')
 
-
-			$scope.date = 0
-
-
 			$scope.storySubmit=function(){
+				console.log($scope.storyForm)
+				// $http({
+				// 	method: 'POST',
+				// 	url: '/api/stories',
+				// 	data: $scope.storyForm
+				// }).then(function(returnData){
+				// 	if( returnData.data.success) $location.url('/userPage')
+				// })
+			}
 
-				$http.post('/api/stories', $scope.user)
-					.then(function(dataFromServer){
-					$scope.stories = dataFromServer.data
-					$scope.newStory = {}
-				})
-	
-			}	
+		
 
 			$scope.date = function() {
 				var d = new Date()
@@ -27,5 +25,4 @@ angular.module('storyTelling')
 
 
 		}
-	}])
 

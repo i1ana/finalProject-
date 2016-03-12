@@ -1,15 +1,14 @@
-
+var db = require('./db.js')
 
 var passport = require('passport')
 var LocalStrategy = require('passport-local').Strategy;
-app.use(passport.initialize());
-app.use(passport.session());
+
 
 passport.serializeUser(function(user, done) {
     done(null, user.id);
 });
 passport.deserializeUser(function(id, done) {
-    User.findById(id, function(err, user) {
+    db.User.findById(id, function(err, user) {
         done(err, user);
     });
 });
@@ -20,7 +19,7 @@ passport.deserializeUser(function(id, done) {
 var bcrypt = require('bcryptjs')
 passport.use(new LocalStrategy(
     function(username, password, done) {
-        User.findOne({ username: username }, function (err, user) {
+        db.User.findOne({ username: username }, function (err, user) {
             if (err) { return done(err); }
             if (!user) {
                 return done(null, false);
@@ -38,34 +37,14 @@ passport.use(new LocalStrategy(
     }
 ));
 
-app.isAuthenticated = function(req, res, next){
-    // If the current user is logged in...
-    if(req.isAuthenticated()){
-    // Middleware allows the execution chain to continue.
-        return next();
-    }
-    // If not, redirect to login
-    console.log('get outta here!')
-    res.redirect('/');
-}
 
 
-app.isAuthenticatedAjax = function(req, res, next){
-    // If the current user is logged in...
-    if(req.isAuthenticated()){
-    // Middleware allows the execution chain to continue.
-        return next();
-    }
-    // If not, redirect to login
-    res.send({error:'not logged in'});
-}
-
-app.isSteveAuthenticated = function(req, res, next){
-    // If the current user is logged in...
-    if(req.isAuthenticated() && req.user.permissions.admin === true){
-    // Middleware allows the execution chain to continue.
-        return next();
-    }
-    // If not, redirect to login
-    res.redirect('/');
-}
+// app.isSteveAuthenticated = function(req, res, next){
+//     // If the current user is logged in...
+//     if(req.isAuthenticated() && req.user.permissions.admin === true){
+//     // Middleware allows the execution chain to continue.
+//         return next();
+//     }
+//     // If not, redirect to login
+//     res.redirect('/');
+// }
