@@ -77,19 +77,39 @@ app.get('/api/me', app.isAuthenticatedAjax, function(req, res){
 //STORIES 
 
 //Reading a story
-app.get('/api/stories/:id', app.isAuthenticatedAjax, function(req, res){
+app.get('/api/stories/:id', function(req, res){
 	console.log('Reading a story')
+	console.log(db.Story.findOne({_id: req.params.id}, '', function(err, story){
+		console.log(story, err)
+	res.send(story)
+	}))
 })
 
 //Reading all stories
-app.get('/api/stories', app.isAuthenticatedAjax, function(req, res){
+app.get('/api/stories', function(req, res){
 	console.log('Reading all stories')
+	console.log(db.Story.findOne({}, '', function(err, story){
+		console.log(story, err)
+	res.send(story)
+	}))
+
 })
 
 //Creating a story 
 app.post('/api/stories', app.isAuthenticatedAjax, function(req, res){
 	console.log('Creating a story')
-})
+	console.log(req.body)
+	 var newStory = new db.Story({
+            title: req.body.title,
+            body: req.body.body,
+            created: new Date(),
+            author: req.body.author,
+        })
+        newStory.save(function(saveErr, user){
+            if ( saveErr ) { res.send({ err:saveErr }) 
+         	}
+        }) 	
+     })
 
 //Updating a story
 app.post('/api/stories/:id', app.isAuthenticatedAjax, function(req, res){

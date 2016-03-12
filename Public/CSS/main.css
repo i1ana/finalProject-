@@ -2,12 +2,16 @@
 /*//Header*/ 
 
 .title {
-	font-size: 5em;
+	font-size: 5.5em;
 	font-weight: 700; 
   color: white;
   text-align: center;
+  font-family: 'Droid Serif', serif;
 }
 
+.writeButton {
+  text-align: center;
+}
 
 /*//Testing text on photo */
 
@@ -29,6 +33,7 @@
   color: white;
   margin: 0;
   padding: 20px;
+  font-family: 'Droid Serif', serif;
 }
 
 /*Articles */
@@ -148,4 +153,19 @@ article a:hover, article a:active {
 
 .bottomButton {
 margin: 1em 0 0.125em;
+}
+
+/*NAVBAR */
+
+.navbar-default{
+  opacity: 0.7;
+  color: black;
+}
+
+.navbar-default:hover {
+  opacity: 1.0;
+}
+
+.navbar-default .navbar-brand {
+    color: #000;
 }
