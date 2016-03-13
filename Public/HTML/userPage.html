@@ -1,31 +1,32 @@
 
+<link rel="stylesheet" type="text/css" href="/CSS/userPage.css">
 
-<div ng-controller="userController">
+<div class="user" ng-controller="userController">
 
 <!-- USER INFO  -->
-	<h2> Your Info: </h2>
+	<h2 class="title"> Your Info: </h2>
 	<div class="media"> 
 		<div class="media-left media-top">
-			<img src="http://placehold.it/64x64"> 
+			<img src="http://placehold.it/100x100"> 
 		</div>
 	<div class="media-body">
 		<div>
-			<p> Name: {{users.username}} </p>
-			<p> Email Address: {{users.email}} </p>
+			<p> <span class="placeHolder"> Name: </span> {{users.username}} </p>
+			<p> <span class="placeHolder"> Email Address: </span>{{users.email}} </p>
 		</div>
 	<!-- STORY INFO -->
 		<div>
-			<p> Submitted Stories: {{users.story.story}}</p>
+			<p> <span class="placeHolder"> Submitted Stories: </span>{{users.story.story}}</p>
 		</div>
 		<div>
-			<p> Favorite Stories: </p>
+			<p> <span class="placeHolder"> Favorite Stories: </span> </p>
 		</div>
 	</div>
 <!-- FOOTER AREA  -->
-	<div>
+	<div class="buttons">
 		<button class="btn btn-default btn-lg" type="submit">DONATE</button>
 	</div>
-	<div>
+	<div class="buttons">
 		<button class="btn btn-default btn-lg" type="submit">Log Out</button> 
 	</div>
 

@@ -9,11 +9,6 @@
   font-family: 'Droid Serif', serif;
 }
 
-.writeButton {
-  text-align: center;
-  font-size: 1em;
-}
-
 /*//Testing text on photo */
 
 .module {
@@ -152,8 +147,32 @@ article a:hover, article a:active {
   color: #a0a0a0;
 }
 
+
+.badge {
+  font-size: 16px;
+}
+/*BUTTONS */
+
 .bottomButton {
   margin: 1em 0 0.125em;
+}
+
+.btn-xl {
+  background-color: #004D40;
+  box-shadow: 3px 3px 3px #95a5a6;
+  padding: 12px 70px;
+  font-size: 22px;
+  color: #fff;
+  line-height: normal;
+  -webkit-border-radius: 8px;
+  -moz-border-radius: 8px;
+  border-radius: 8px;
+}
+
+.btn-xl a{
+  color: #000;
+  text-decoration: none;
+  background-color #95a5a6;
 }
 
 /*NAVBAR */

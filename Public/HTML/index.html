@@ -9,12 +9,32 @@
 <!-- Area with video/picture and text  -->
 	  <div class="module">
 	  	<h1 class="title">Narratus</h1>
-	   <button class="btn btn-default btn-lg fixed-bottom writeButton" type="submit"> <a href="/#storySubmit"> Start Writing </a> </button>
+	   <button class="btn btn-xl" type="submit"> <a href="/#storySubmit"> Start Writing </a> </button>
 	  </div>
 
 <!-- Featured Stories area -->
+<div>
 
-<input onclick='responsiveVoice.speak({{story.body}}, "UK English Male");' type='button' value='Click Button to Hear Story!' />
+<!-- //Google Search  -->
+
+<script>
+  (function() {
+    var cx = '009454533912938037443:dgzomsfuzeg';
+    var gcse = document.createElement('script');
+    gcse.type = 'text/javascript';
+    gcse.async = true;
+    gcse.src = (document.location.protocol == 'https:' ? 'https:' : 'http:') +
+        '//cse.google.com/cse.js?cx=' + cx;
+    var s = document.getElementsByTagName('script')[0];
+    s.parentNode.insertBefore(gcse, s);
+  })();
+</script>
+
+<gcse:search></gcse:search>
+</div>
+
+
+<input onclick='responsiveVoice.speak("Brian, you suck poopy butt", "UK English Male");' type='button' value='Click Button to Hear Story!' />
 
 
 	<div ng-repeat="story in stories">
@@ -28,7 +48,7 @@
 			    </div>
 		    </aside>
 		    <div> {{story.body}} </div>
-		     <span class="badge glyphicon glyphicon-search" aria-hidden="true" ng-click="likes($index, story)"> {{story.likes}} </span>
+		     <span class="badge glyphicon glyphicon-thumbs-up" aria-hidden="true" ng-click="likes($index, story)"> {{story.likes}} </span>
 		</article>
 	</div>
 		    <p>In this article, I will show that it <i>is</i> possible to create a Medium-style article with beautiful typography and <b>not</b> have it take up over a megabyte on the wire. I will include fonts and other CSS bells and whistles, but <a href="#">not a smidgen of JS</a> outside of embedded content. Because when you run something like Medium, you should be able to get all the analytics you need from your goddamned server logs.</p>
@@ -69,11 +89,11 @@
 
 	<div class = "well well-lg">
 		<div class="bottomButton"> 
-			<button class="btn btn-default btn-lg" type="submit">$$$$ DONATE $$$$</button> 
+			<button class="btn btn-xl" type="submit">$$$$ DONATE $$$$</button> 
 		</div>
 		<div class="bottomButton"> 
-			<button class="btn btn-default btn-lg" type="submit"> <a href="./HTML/storySubmit.html">Start Writing a Story </a> </button>
-			<button class="btn btn-default btn-lg" type="submit"> <a href="./HTML/userPage.html">Log In </a> </button> 
+			<button class="btn btn-xl" type="submit"> <a href="/#storySubmit.html">Start Writing a Story </a> </button>
+			<button class="btn btn-xl" type="submit"> <a href="/#userPage.html">Log In </a> </button> 
 		</div>
 	</div>
 

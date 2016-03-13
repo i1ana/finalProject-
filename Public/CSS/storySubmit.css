@@ -1,0 +1,25 @@
+/*Story Submit Page CSS */
+
+.submit{
+	background-color: #ecf0f1; 
+	box-shadow: 5px 5px 5px #95a5a6; 
+	padding: 20px;
+	width: 700px; 
+}
+
+.submit h2 {
+	font-size: 2.3em;
+	text-align: center;
+}
+
+.btn-xl {
+	background-color: #004D40;
+	box-shadow: 3px 3px 3px #95a5a6;
+    padding: 16px 70px;
+    font-size: 22px;
+    color: #fff;
+    line-height: normal;
+    -webkit-border-radius: 8px;
+       -moz-border-radius: 8px;
+            border-radius: 8px;
+    }
