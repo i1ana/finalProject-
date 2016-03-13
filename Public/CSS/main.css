@@ -181,6 +181,7 @@ article a:hover, article a:active {
   opacity: 0.7;
   color: #000;
   background-color: #004D40; 
+  font-size: 0.9em;
 }
 
 .navbar-default:hover {
@@ -190,10 +191,11 @@ article a:hover, article a:active {
  .navbar-brand {
     color: #000;
     font-size: 1.5em;
-    font-weight: 300;
+    font-weight: 700;
 }
 
 .navbar-default .navbar-nav>li>a {
     font-family: Lato, Helvetica Neue, Arial, sans-serif;
     font-size: 0.9em;
 }
+
