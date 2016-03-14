@@ -9,3 +9,5 @@ Some problems I plan to overcome with this project:
 
 -Donations 
   -Plan on using Stripe 
+
+-Currently using ResponsiveVoice.JS for text to voice 
