@@ -1,0 +1,27 @@
+.landing {
+	background-color: #95a5a6; 
+}
+
+.icons {
+	position: fixed;
+	display: inline-block;
+	top: 0;
+	width: 35px;
+	height: 35px;
+	padding-bottom: 40px;
+
+}
+
+.logo {
+	position: fixed;
+	top: 50%;
+	left: 50%;
+	transform: translate(-50%, -50%);
+}
+
+.footer{
+	position: fixed;
+	bottom: 0;
+	width: 100%;
+	padding: 40px;
+}

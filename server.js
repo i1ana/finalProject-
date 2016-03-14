@@ -58,7 +58,6 @@ app.get('/', function(req, res){
 	console.log('Got my turtle shell')
 	res.sendFile('shell.html', {root: './Public/HTML'})
 })
-console.log("on line 35", app.isAuthenticatedAjax)
 
 app.get('/api/me', app.isAuthenticatedAjax, function(req, res){
     res.send({user:req.user})
@@ -110,27 +109,6 @@ app.post('/api/stories', app.isAuthenticatedAjax, function(req, res){
 //Updating a story
 app.post('/api/stories/:id', app.isAuthenticatedAjax, function(req, res){
 	console.log('Updating a story')
-
-
-	// var newUser = new user({
-	// 	name: req.body.name,
-	// 	email: req.body.email
-	// })
-
-	// var newStory = new story({
-	// 	title: req.body.story.title,
-	// 	body: req.body.story.story,
-	// 	author: req.body.name
-
-	// })
-
-	// newUser.save(function(saveErr, user){
-	// 	newStory.save(function(saveErr, story){
-	// 		res.send({story : story, user: user})
-
-	// 	})
-
-	// })
 })
 
 

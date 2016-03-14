@@ -23,4 +23,5 @@ angular.module('storyTelling')
 		    $scope.likes = function(index,story) {
 				story.likes++
 			}
+
 	}
