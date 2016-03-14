@@ -16,14 +16,16 @@
 
 	<!-- ANGULAR  -->
 
-
+	<script type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/jquery/2.2.1/jquery.min.js"></script>
 	<script type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/angular.js/1.5.0/angular.js"></script>
 	<script type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/angular.js/1.5.0/angular-route.min.js"></script>
+	<script type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/twitter-bootstrap/3.3.6/js/bootstrap.min.js"></script>
 	<script type="text/javascript" src="/JS/angularModule.js"></script>
 	<script type="text/javascript" src="/JS/homeController.js"></script>
 	<script type="text/javascript" src="/JS/loginController.js"></script>
 	<script type="text/javascript" src="/JS/storyController.js"></script>
 	<script type="text/javascript" src="/JS/userController.js"></script>
+	<script type="text/javascript" src="/JS/navbarController.js"></script>
 
 
 
@@ -40,6 +42,18 @@
 <ng-include src="'/HTML/navbar.html'"></ng-include>
 
 <div class="container" ng-view></div>
+
+<form action="/charge" method="POST">
+  <script
+    src="https://checkout.stripe.com/checkout.js" class="stripe-button"
+    data-key="pk_test_6pRNASCoBOKtIshFeQd4XMUh"
+    data-image="/img/documentation/checkout/marketplace.png"
+    data-name="Stripe.com"
+    data-description="2 widgets"
+    data-amount="2000"
+    data-locale="auto">
+  </script>
+</form>
 
 
 </body>

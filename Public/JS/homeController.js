@@ -24,4 +24,12 @@ angular.module('storyTelling')
 				story.likes++
 			}
 
+			//Responsive Voice 
+
+			$scope.talkMethod = function(story){
+				responsiveVoice.speak(story.body, "UK English Male")
+			}
+
+
+
 	}

@@ -32,19 +32,10 @@
 
 //Controllers 
 
-	
-
-angular.module('storyTelling')
-	.controller('navbarController', ['$scope', navbarController])
-
 angular.module('storyTelling')
 	.controller('landingController', ['$scope', landingController])
 
 //Functions 
-
-function navbarController($scope){
-	console.log('Navbar nagivating')
-}
 
 function landingController($scope){
 	console.log('The site has landed')

@@ -178,6 +178,20 @@ app.post('/login', function(req, res, next){
 	    res.send({user:req.user})
 	})
 
+//SEARCH
+app.post('/search', function(req, res){
+    var query = req.body.searchTerm
+    var searchQ = new RegExp(query + '+', 'i')
+
+    Story.find({
+        $or:[
+            {body: {$regex: searchQ}},
+            {title:{$regex: searchQ}}
+        ]
+    }, function(err, stories){
+        res.send(stories)
+    })
+})
 
 //Creating Server and Listening
 
