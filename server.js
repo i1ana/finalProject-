@@ -195,7 +195,7 @@ app.post('/search', function(req, res){
 
 //Creating Server and Listening
 
-var port = 3000
+var port = 80
 app.listen(port, function(){
 	console.log('The server is running away on ' + port)
 })

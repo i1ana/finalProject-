@@ -19,6 +19,7 @@
 	<script type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/jquery/2.2.1/jquery.min.js"></script>
 	<script type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/angular.js/1.5.0/angular.js"></script>
 	<script type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/angular.js/1.5.0/angular-route.min.js"></script>
+	<script src="//cdnjs.cloudflare.com/ajax/libs/angular-sanitize/1.5.0/angular-sanitize.min.js"></script>
 	<script type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/twitter-bootstrap/3.3.6/js/bootstrap.min.js"></script>
 	<script type="text/javascript" src="/JS/angularModule.js"></script>
 	<script type="text/javascript" src="/JS/homeController.js"></script>
@@ -39,7 +40,7 @@
 </head>
 <body>
 
-<ng-include src="'/HTML/navbar.html'"></ng-include>
+<ng-include src="'/HTML/navbar.html'" ng-show="location != '/' "></ng-include>
 
 <div class="container" ng-view></div>
 
