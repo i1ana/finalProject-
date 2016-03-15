@@ -10,7 +10,7 @@
   font-family: 'Droid Serif', serif;
 }
 
-/*Testing text on photo */
+/*Text on photo */
 
 .module {
   background: 
@@ -24,6 +24,10 @@
   height: 400px;
   position: relative;
   margin: 0;
+}
+
+.writeButton{
+  margin: 0 auto;
 }
 
 .title h1 {

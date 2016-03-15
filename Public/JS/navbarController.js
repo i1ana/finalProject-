@@ -4,7 +4,8 @@ angular.module('storyTelling')
 	function navbarController($scope, $http, $rootScope){
 	console.log('Navbar nagivating')
 
-	$rootScope.nav = {show:true}
+	$rootScope.nav = $rootScope.nav || {show:true}
+	$rootScope.nav.show = true
 	$scope.nav = $rootScope.nav 
 
 	$scope.searchIt = function(){

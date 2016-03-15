@@ -8,7 +8,9 @@ angular.module('storyTelling')
 
 			$scope.likes = 0
 		
-			$rootScope.nav.show = true	
+				$rootScope.nav = $rootScope.nav || {show:true}
+				$rootScope.nav.show = true
+				$scope.nav = $rootScope.nav 
 
 			$http.get('/api/stories')
 		    .then(function(returnData){

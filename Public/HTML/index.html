@@ -9,7 +9,7 @@
 <!-- Area with video/picture and text  -->
 	  <div class="module">
 	  	<h1 class="title">Narratus</h1>
-	   <button class="btn btn-xl" type="submit"> <a href="/#storySubmit"> Start Writing </a> </button>
+	   <button class="btn btn-xl writeButton" type="submit"> <a href="/#storySubmit"> Start Writing </a> </button>
 	  </div>
 
 <!-- Featured Stories area -->
@@ -47,44 +47,17 @@
 			    </div>
 		    </aside>
 		 
-		    <div read-more ng-model="story.body" words="true" length="5">{{story.body}} </div>
+		    <div read-more ng-model="story.body" words="true" length="50">{{story.body}} </div>
 			<input ng-click="talkMethod(story)" type='button' value='Click Button to Hear Story!' />
 
 		     <span class="badge glyphicon glyphicon-thumbs-up" aria-hidden="true" ng-click="likes($index, story)"> {{story.likes}} </span>
 		</article>
 	</div>
-		    <p>In this article, I will show that it <i>is</i> possible to create a Medium-style article with beautiful typography and <b>not</b> have it take up over a megabyte on the wire. I will include fonts and other CSS bells and whistles, but <a href="#">not a smidgen of JS</a> outside of embedded content. Because when you run something like Medium, you should be able to get all the analytics you need from your goddamned server logs.</p>
-		    <p>Something to add another paragraph here.</p>
-		    <h2>Why do I bother</h2>
-		    <p>I bother because for some reason Medium, the "publishing platform", is slow to load even for really simple, text-only documents. I believe the issue is that it loads unnecessary scripts that don't add to much. And they also strongly recommend using an app on mobile devices - why is this even necessary to view text files with an occasional image?</p>
-		    <ul>
-		      <li>This is a normal, unordered list. It's rendered by your browser.</li>
-		      <li>It means that the bullets might look a bit different in different browsers, or the margins might not <i>quite</i> match up.</li>
-		      <li>But this is fine, because at least I am not wasting CSS on doing my own list bullets.</li>
-		    </ul>
-		    <h2>Some other heading</h2>
-		    <blockquote>Someone important said this. <cite>Simone Importe-Ante</cite></blockquote>
-		    <h3>Recipe for total panic:</h3>
-		    <ol>
-		      <li>Cats</li>
-		      <li>Dogs</li>
-		      <li>Living together</li>
-		    </ol>
-		    <h2>Some code</h2>
-		    <pre>#include &lt;stdio.h>
-
-		int main(int argc, char* argv[]) {
-		  puts(<strong>"Hello, world!"</strong>);
-		  return 0;
-		}</pre>
-		    <p>I'm fine with this code rendering with different fonts on different systems.</p>
-		    <h2>Conclusion</h2>
-		  </article>
 		   <p class="image-p">
 		      <img src="/Photos/writing.jpeg" alt="A notebook" />
 		      <span class="caption">Write a story now!</span>
 		    </p>
-	 	<article class="page next" ng-repeat="story in stories track by $index"> </article>
+	 	<!-- <article class="page next" ng-repeat="story in stories track by $index"> </article> -->
 
 
 <!-- BUTTONS  -->

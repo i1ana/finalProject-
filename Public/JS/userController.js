@@ -6,7 +6,9 @@ angular.module('storyTelling')
 	function userController($scope, $http, $rootScope){
 	console.log('User is working')
 
+	$rootScope.nav = $rootScope.nav || {show:true}
 	$rootScope.nav.show = true
+	$scope.nav = $rootScope.nav 
 
 	$scope.user = []
 
