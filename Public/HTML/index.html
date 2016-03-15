@@ -42,15 +42,15 @@
 			    <div class="post-info">
 			    	<h2>{{story.title}}</h2>
 			        <p class="author-name">Written by {{story.author}}</p>
-			        <p>Written on <strong>{{story.created}}</strong></p>
+			        <p>Written on <strong>{{story.created | date }}</strong></p>
 
 			    </div>
 		    </aside>
 		 
 		    <div read-more ng-model="story.body" words="true" length="50">{{story.body}} </div>
-			<input ng-click="talkMethod(story)" type='button' value='Click Button to Hear Story!' />
-
-		     <span class="badge glyphicon glyphicon-thumbs-up" aria-hidden="true" ng-click="likes($index, story)"> {{story.likes}} </span>
+			<input class="btn-xl" ng-click="talkMethod(story)" type='button' value='Click Button to Hear Story!' /> 
+		
+		     <span class="badge glyphicon glyphicon-thumbs-up" aria-hidden="true" ng-click="likes($index, story)"> {{story.likes}} </span> 
 		</article>
 	</div>
 		   <p class="image-p">

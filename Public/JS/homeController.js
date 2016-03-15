@@ -33,6 +33,9 @@ angular.module('storyTelling')
 				responsiveVoice.speak(story.body, "UK English Male")
 			}
 
+			// toUpperCase(0)
+	
+
 
 
 	}

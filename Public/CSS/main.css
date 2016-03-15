@@ -28,6 +28,8 @@
 
 .writeButton{
   margin: 0 auto;
+  display: block;
+  color: #fff;
 }
 
 .title h1 {
@@ -175,7 +177,7 @@ article a:hover, article a:active {
 }
 
 .btn-xl a{
-  color: #000;
+  color: #fff;
   text-decoration: none;
   background-color #95a5a6;
 }
@@ -216,7 +218,7 @@ article a:hover, article a:active {
   box-sizing: border-box;
   width: 100%;
   text-align: left;
-  font-size: 13px;
+  font-size: 1em;
   padding: 20px 15px;
   margin-top: 15px;
 }
