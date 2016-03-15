@@ -33,11 +33,13 @@
 //Controllers 
 
 angular.module('storyTelling')
-	.controller('landingController', ['$scope', landingController])
+	.controller('landingController', ['$scope', '$rootScope', landingController])
+
 
 //Functions 
 
-function landingController($scope){
+function landingController($scope, $rootScope){
+	$rootScope.nav.show = false
 	console.log('The site has landed')
 }
 

@@ -183,10 +183,11 @@ app.post('/search', function(req, res){
     var query = req.body.searchTerm
     var searchQ = new RegExp(query + '+', 'i')
 
-    Story.find({
+    db.Story.find({
         $or:[
             {body: {$regex: searchQ}},
-            {title:{$regex: searchQ}}
+            {title:{$regex: searchQ}},
+            {author: {$regex: searchQ}}
         ]
     }, function(err, stories){
         res.send(stories)
@@ -195,7 +196,7 @@ app.post('/search', function(req, res){
 
 //Creating Server and Listening
 //We need to configure local and production ports 
-var port = 80
+var port = 3000 
 app.listen(port, function(){
 	console.log('The server is running away on ' + port)
 })

@@ -47,7 +47,7 @@
 			    </div>
 		    </aside>
 		 
-		    <div> {{story.body}} </div>
+		    <div read-more ng-model="story.body" words="true" length="5">{{story.body}} </div>
 			<input ng-click="talkMethod(story)" type='button' value='Click Button to Hear Story!' />
 
 		     <span class="badge glyphicon glyphicon-thumbs-up" aria-hidden="true" ng-click="likes($index, story)"> {{story.likes}} </span>

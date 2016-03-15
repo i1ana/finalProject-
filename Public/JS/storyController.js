@@ -1,8 +1,10 @@
 angular.module('storyTelling')
-	.controller('storyController', ['$scope', '$http', '$location', storyController])
+	.controller('storyController', ['$scope', '$http', '$location', '$rootScope', storyController])
 
-			function storyController($scope, $http, $location){
+			function storyController($scope, $http, $location, $rootScope){
 			console.log('Dis where you enter stury')
+
+			$rootScope.nav.show = true
 
 			$scope.storySubmit=function(){
 				console.log("I am working", $scope.storyForm)

@@ -1,8 +1,10 @@
 angular.module('storyTelling')
-	.controller('loginController', ['$scope', '$http', '$location', loginController])
+	.controller('loginController', ['$scope', '$http', '$location', '$rootScope', loginController])
 
-	function loginController($scope, $http, $location){
+	function loginController($scope, $http, $location, $rootScope){
 		console.log('Login is working')
+
+		$rootScope.nav.show = true
 	
 		$scope.signup = function(){
 			$http({

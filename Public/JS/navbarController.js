@@ -1,21 +1,24 @@
 angular.module('storyTelling')
-	.controller('navbarController', ['$scope', navbarController])
+	.controller('navbarController', ['$scope', '$http', '$rootScope', navbarController])
 
-	function navbarController($scope){
+	function navbarController($scope, $http, $rootScope){
 	console.log('Navbar nagivating')
-		
 
-	// $http.post('/search', $scope.search){
-	// 	searchTerm: $scope.search
-	// } .then(function(returnData){
-	// 	$scope.searchResult
-	// })
+	$rootScope.nav = {show:true}
+	$scope.nav = $rootScope.nav 
 
-	// $scope.showNav = function(){
-	// 	if('/'){
+	$scope.searchIt = function(){
+		$http.post('/search', {
+			searchTerm: $scope.search.term
+		}).then(function(returnData){
+			console.log(returnData)
+			$scope.searchResults = returnData.data
+			
+		})
+	}
 
-	// 	}
-	// }
+
+	
 
 
 }

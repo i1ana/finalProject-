@@ -38,13 +38,13 @@
 
 	
 </head>
-<body>
+<body >
 
-<ng-include src="'/HTML/navbar.html'" ng-show="location != '/' "></ng-include>
+<ng-include src="'/HTML/navbar.html'" ></ng-include>
 
 <div class="container" ng-view></div>
 
-<form action="/charge" method="POST">
+<!-- <form action="/charge" method="POST">
   <script
     src="https://checkout.stripe.com/checkout.js" class="stripe-button"
     data-key="pk_test_6pRNASCoBOKtIshFeQd4XMUh"
@@ -54,7 +54,7 @@
     data-amount="2000"
     data-locale="auto">
   </script>
-</form>
+</form> -->
 
 
 </body>

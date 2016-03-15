@@ -1,13 +1,14 @@
 angular.module('storyTelling')
-	.controller('homeController', ['$scope', '$http', homeController])
+	.controller('homeController', ['$scope', '$http', '$rootScope', homeController])
 
 		console.log("Home controller is working")
 
-		function homeController($scope, $http){
+		function homeController($scope, $http, $rootScope){
 			console.log('Here is a story')
 
 			$scope.likes = 0
-	
+		
+			$rootScope.nav.show = true	
 
 			$http.get('/api/stories')
 		    .then(function(returnData){
