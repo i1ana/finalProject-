@@ -123,13 +123,14 @@ blockquote > cite {
   color: #ababab;
 }
 
-pre {
+/*pre {
   display: block;
   padding: 0.5em;
   background-color: #ebebeb;
-}
+}*/
 
 .image-p > img {
+  padding: 10px;
   display: block;
   max-width: 100%;
 }
@@ -137,13 +138,12 @@ pre {
 .image-p > .caption {
   display: block;
   width: 100%;
-  font-size: 80%;
   border-bottom: 1px solid #ababab;
   color: #5b5b5b;
 }
 
 article a, article a:link {
-  color: #000;
+  color: #fff;
 }
 
 article a:visited {
@@ -156,7 +156,7 @@ article a:hover, article a:active {
 
 
 .badge {
-  font-size: 16px;
+  font-size: 1em;
 }
 /*BUTTONS */
 
@@ -185,27 +185,27 @@ article a:hover, article a:active {
 /*NAVBAR */
 
 .navbar-default{
-  opacity: 0.7;
+/*  opacity: 0.8;*/
   color: #fff;
   background-color: #004D40; 
-  font-size: 0.9em;
+  font-size: 1em;
   padding: 10px;
 
 }
 
 .navbar-default:hover {
-  opacity: 1.0;
+  color: #DADADA;
 }
 
  .navbar-brand {
-    color: #000;
-    font-size: 1.7em;
+    font-size: 2em;
     font-weight: 700;
+    color: #fff;
 }
 
 .navbar-default .navbar-nav>li>a {
-    font-family: Lato, Helvetica Neue, Arial, sans-serif;
-    font-size: 0.9em;
+    color: #DADADA;
+    font-size: 1em; 
 }
 
 .search{
@@ -230,11 +230,14 @@ article a:hover, article a:active {
 }
 
 .footer-distributed .footer-left,
-.footer-distributed .footer-center,
 .footer-distributed .footer-right{
   display: inline-block;
   vertical-align: top;
 }
+
+.footerLogo {
+  text-align: center;  
+ }
 
 /* Footer left */
 
@@ -242,11 +245,9 @@ article a:hover, article a:active {
   width: 40%;
 }
 
-/* The company logo */
-
 .footer-distributed h3{
   color: #fff;
-  font-size: 36px; 
+  font-size: 1.56em; 
   margin: 0;
 }
 
@@ -257,7 +258,7 @@ article a:hover, article a:active {
 /* Footer links */
 
 .footer-distributed .footer-links{
-  color:  #00000;
+  color:  #fff;
   margin: 15px 0 12px;
   padding: 0;
 }
@@ -271,53 +272,9 @@ article a:hover, article a:active {
 
 .footer-distributed .footer-company-name{
   color:  #fff;
-  font-size: 13px;
-  font-weight: normal;
+  font-size: 1em;
   margin: 0;
 }
-
-/* Footer Center */
-
-.footer-distributed .footer-center{
-  width: 35%;
-}
-
-.footer-distributed .footer-center i{
-  background-color:  #FFF172;
-  color: #fff;
-  font-size: 25px;
-  width: 38px;
-  height: 38px;
-  border-radius: 50%;
-  text-align: center;
-  line-height: 42px;
-  margin: 10px 15px;
-  vertical-align: middle;
-}
-
-.footer-distributed .footer-center i.fa-envelope{
-  font-size: 17px;
-  line-height: 38px;
-}
-
-.footer-distributed .footer-center p{
-  display: inline-block;
-  color: #fff;
-  vertical-align: middle;
-  margin:0;
-}
-
-.footer-distributed .footer-center p span{
-  display:block;
-  font-size:14px;
-  line-height:2;
-}
-
-.footer-distributed .footer-center p a{
-  color:  #1e0f2d;
-  text-decoration: none;;
-}
-
 
 /* Footer Right */
 
@@ -328,7 +285,7 @@ article a:hover, article a:active {
 .footer-distributed .footer-company-about{
   line-height: 20px;
   color:  #fff;
-  font-size: 14px;
+  font-size: 1em;
   font-weight: normal;
   margin: 0;
 }
@@ -336,14 +293,15 @@ article a:hover, article a:active {
 .footer-distributed .footer-company-about span{
   display: block;
   color:  #fff;
-  font-size: 16px;
+  font-size: 1em;
   font-weight: 700;
   margin-bottom: 20px;
 }
 
 .footer-distributed .footer-icons{
   margin-top: 25px;
-  color: #663399;
+  color: #fff;
+  display: inline-block;
 }
 
 .footer-distributed .footer-icons a{
@@ -353,7 +311,7 @@ article a:hover, article a:active {
   cursor: pointer;
   border-radius: 2px;
   font-size: 20px;
-  color: #000000;
+  color: #fff;
   text-align: center;
   line-height: 35px;
   margin-right: 3px;
@@ -365,7 +323,7 @@ article a:hover, article a:active {
 @media (max-width: 880px) {
 
   .footer-distributed{
-    font: bold 14px sans-serif;
+    font: bold 1em sans-serif;
   }
 
   .footer-distributed .footer-left,

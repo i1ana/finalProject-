@@ -14,28 +14,6 @@
 
 <!-- Featured Stories area -->
 <div>
-
-<!-- //Google Search  -->
-	<div>
-		<script>
-		  (function() {
-		    var cx = '009454533912938037443:dgzomsfuzeg';
-		    var gcse = document.createElement('script');
-		    gcse.type = 'text/javascript';
-		    gcse.async = true;
-		    gcse.src = (document.location.protocol == 'https:' ? 'https:' : 'http:') +
-		        '//cse.google.com/cse.js?cx=' + cx;
-		    var s = document.getElementsByTagName('script')[0];
-		    s.parentNode.insertBefore(gcse, s);
-		  })();
-		</script>
-
-		<gcse:search></gcse:search>
-	</div>
-
-
-
-
 	<div ng-repeat="story in stories">
 		<article class="page current">
 		    <aside class="post-meta">
@@ -43,22 +21,22 @@
 			    	<h2>{{story.title}}</h2>
 			        <p class="author-name">Written by {{story.author}}</p>
 			        <p>Written on <strong>{{story.created | date }}</strong></p>
-
 			    </div>
 		    </aside>
-		 
+		 <div>
 		    <div read-more ng-model="story.body" words="true" length="50">{{story.body}} </div>
 			<input class="btn-xl" ng-click="talkMethod(story)" type='button' value='Click Button to Hear Story!' /> 
 		
 		     <span class="badge glyphicon glyphicon-thumbs-up" aria-hidden="true" ng-click="likes($index, story)"> {{story.likes}} </span> 
+		  </div>
 		</article>
 	</div>
+	<div>
 		   <p class="image-p">
 		      <img src="/Photos/writing.jpeg" alt="A notebook" />
 		      <span class="caption">Write a story now!</span>
 		    </p>
-	 	<!-- <article class="page next" ng-repeat="story in stories track by $index"> </article> -->
-
+	 </div>
 
 <!-- BUTTONS  -->
 
@@ -77,9 +55,9 @@
 <!-- FOOTER SECTION --> 
 		<footer class="footer-distributed">
 
-			<div class="footer-left">
+			<div>
 
-				<h3>Company<span>logo</span></h3>
+				<h3>Narratus</h3>
 
 				<p class="footer-links">
 					<a href="/#index">Home</a>
@@ -89,30 +67,9 @@
 					<a href="/#login">Log In</a>
 				</p>
 
-				<p class="footer-company-name">Narratus &copy; 2016</p>
 			</div>
 
-			<div class="footer-center">
-
-				<div>
-					<i class="fa fa-map-marker"></i>
-					<p><span>5717 Arapahoe Ave</span> Colorado</p>
-					<p><span>(720) 644-9187 </span></p>
-				</div>
-
-				<div>
-					<i class="fa fa-envelope"></i>
-					<p><a href="mailto:support@company.com">Email Us</a></p>
-				</div>
-
-			</div>
-
-			<div class="footer-right">
-
-				<p class="footer-company-about">
-					<span>About the Company:</span>
-					Bringing senior's stories to the world 
-				</p>
+			<div> 
 
 				<div class="footer-icons">
 					<a href="http://facebook.com"><img src="/Photos/facebook.png" class="fa fa-icon"></img></a>
@@ -121,6 +78,7 @@
 					<a href="http://instagram.com"><img src="/Photos/instagram.png" class="fa fa-icon"></img></a>
 				</div>
 
+				<p class="footer-company-name">Narratus &copy; 2016</p>
 			</div>
 
 		</footer>		

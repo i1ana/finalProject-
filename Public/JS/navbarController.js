@@ -8,6 +8,8 @@ angular.module('storyTelling')
 	$rootScope.nav.show = true
 	$scope.nav = $rootScope.nav 
 
+	$scope.showResults = !$scope.showResults
+
 	$scope.searchIt = function(){
 		$http.post('/search', {
 			searchTerm: $scope.search.term
@@ -18,6 +20,7 @@ angular.module('storyTelling')
 		})
 	}
 
+	$scope.showResults = false
 
 	
 
