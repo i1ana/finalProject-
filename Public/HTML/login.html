@@ -1,20 +1,21 @@
-
-    <h1>Register</h1>
-    
-    <form ng-submit="signup()">
-        <input type="text" ng-model="signupForm.username" placeholder="Username"/>
-        <input type="email" ng-model="signupForm.email" placeholder="Email"> 
-        <input type="password" ng-model="signupForm.password" placeholder="Password"/>
-        <input type="submit"/>
-    </form>
+    <div>
+        <h1>Register</h1>
         
-    <h1>Existing Users</h1>
-       
-    <form ng-submit="login()">
-        <input type="text" ng-model="loginForm.username" placeholder="Username"/>
-        <input type="password" ng-model="loginForm.password" placeholder="Password"/>
-        <input type="submit"/>
-    </form>
+        <form ng-submit="signup()">
+          <span> Username: <input type="text" ng-model="signupForm.username" placeholder="Username"/> </span>
+            <input type="email" ng-model="signupForm.email" placeholder="Email"> 
+            <input type="password" ng-model="signupForm.password" placeholder="Password"/>
+            <input type="submit"/>
+        </form>
+            
+        <h1>Existing Users</h1>
+           
+        <form ng-submit="login()">
+            <input type="text" ng-model="loginForm.username" placeholder="Username"/>
+            <input type="password" ng-model="loginForm.password" placeholder="Password"/>
+            <input type="submit"/>
+        </form>
+    </div>
 
 
      

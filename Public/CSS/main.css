@@ -189,6 +189,8 @@ article a:hover, article a:active {
   color: #fff;
   background-color: #004D40; 
   font-size: 0.9em;
+  padding: 10px;
+
 }
 
 .navbar-default:hover {
