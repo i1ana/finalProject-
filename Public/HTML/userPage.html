@@ -1,6 +1,6 @@
 
 <link rel="stylesheet" type="text/css" href="/CSS/userPage.css">
-
+<div class="whiteSpace"> </div>
 <div class="user" ng-controller="userController">
 
 <!-- USER INFO  -->
@@ -15,9 +15,9 @@
 			<p> <span class="placeHolder"> Email Address: </span>{{users.email}} </p>
 		</div>
 	<!-- STORY INFO -->
-		<div>
-			<p> <span class="placeHolder"> Submitted Stories: </span>{{author.story.title}}</p>
-		</div>
+		<!-- <div>
+			<span class="placeHolder"> Submitted Stories: </span> <p ng-repeat="story in users.stories"> {{story}}</p>
+		</div> -->
 		<div>
 			<p> <span class="placeHolder"> Favorite Stories: </span> </p>
 		</div>
@@ -27,7 +27,7 @@
 		<button class="btn btn-xl" type="submit">DONATE</button>
 	</div>
 	<div class="buttons">
-		<button class="btn btn-xl" type="submit">Log Out</button> 
+		<button class="btn btn-xl" type="submit"><a href="/logout">Log Out</a></button> 
 	</div>
 
 </div>

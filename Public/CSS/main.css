@@ -143,7 +143,7 @@ blockquote > cite {
 }
 
 article a, article a:link {
-  color: #fff;
+  color: #000;
 }
 
 article a:visited {
@@ -189,7 +189,8 @@ article a:hover, article a:active {
   color: #fff;
   background-color: #004D40; 
   font-size: 1em;
-  padding: 10px;
+  font-family: 'Lato', sans-serif;
+  padding: 5px;
 
 }
 
@@ -200,6 +201,7 @@ article a:hover, article a:active {
  .navbar-brand {
     font-size: 2em;
     font-weight: 700;
+    font-family: 'Droid Serif', serif;
     color: #fff;
 }
 
@@ -219,7 +221,7 @@ article a:hover, article a:active {
   box-shadow: 0 1px 1px 0 rgba(0, 0, 0, 0.12);
   box-sizing: border-box;
   width: 100%;
-  text-align: left;
+  text-align: center;
   font-size: 1em;
   padding: 20px 15px;
   margin-top: 15px;

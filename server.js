@@ -67,6 +67,12 @@ app.get('/api/me', app.isAuthenticatedAjax, function(req, res){
 // 	res.send({user:req.user})
 // })
 
+app.get('/logout', function(req, res){
+    console.log('Logging Out')
+    req.logout()
+    res.redirect('/')
+})
+
 //STORIES 
 
 //Reading a story
@@ -97,11 +103,20 @@ app.post('/api/stories', app.isAuthenticatedAjax, function(req, res){
             body: req.body.body,
             created: new Date(),
             author: req.body.author,
+            user: req.user?req.user._id:undefined,
         })
-        newStory.save(function(saveErr, user){
+        newStory.save(function(saveErr, doc){
             if ( saveErr ) { res.send({ err:saveErr }) 
          	} else {
          		res.send({success: 'success'})
+                if(req.user){
+                        req.user.stories = req.user.stories || [] 
+                        req.user.stories.push(doc._id)
+                        req.user.markModified('stories')
+                        req.user.save(function(err){
+                            console.log(err)
+                        })
+                }
          	}
         }) 	
      })
@@ -173,10 +188,22 @@ app.post('/login', function(req, res, next){
 
 // GET request handler on server to check if someone is logged in
 
-	app.get('/api/me', function(req, res){
-	    // Return the logged in user (or undefined if they are not logged in)
-	    res.send({user:req.user})
-	})
+app.get('/api/me', function(req, res){
+        // Return the logged in user (or undefined if they are not logged in)
+        res.send({user:req.user})
+    })
+
+	// app.get('/api/me', function(req, res){
+	//     // Return the logged in user (or undefined if they are not logged in)
+	    
+ //        if(req.user){
+ //            db.User.findOne({_id:req.user._id}).populate('stories').exec(function(err,user){
+ //                res.send({user:req.user})  
+ //            })
+ //        } else {
+ //            res.send({user:undefined})
+ //        }
+	// })
 
 //SEARCH
 app.post('/search', function(req, res){

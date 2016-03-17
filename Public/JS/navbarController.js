@@ -8,21 +8,13 @@ angular.module('storyTelling')
 	$rootScope.nav.show = true
 	$scope.nav = $rootScope.nav 
 
-	$scope.showResults = !$scope.showResults
-
 	$scope.searchIt = function(){
 		$http.post('/search', {
 			searchTerm: $scope.search.term
 		}).then(function(returnData){
 			console.log(returnData)
 			$scope.searchResults = returnData.data
-			
+			$('#myModal').modal('show')
 		})
 	}
-
-	$scope.showResults = false
-
-	
-
-
 }

@@ -16,6 +16,7 @@ angular.module('storyTelling')
 	$http.get('/api/me')
 	    .then(function(returnData){
 	        if(returnData.data.user){
+	        	console.log(returnData.data.user)
 	            $scope.users = returnData.data.user
 	        }
 	        else {
@@ -24,5 +25,3 @@ angular.module('storyTelling')
 	    })
 
 	}
-
-	
