@@ -137,6 +137,7 @@ blockquote > cite {
 
 .image-p > .caption {
   display: block;
+  text-align: center;
   width: 100%;
   border-bottom: 1px solid #ababab;
   color: #5b5b5b;
@@ -157,6 +158,10 @@ article a:hover, article a:active {
 
 .badge {
   font-size: 1em;
+}
+
+.well {
+  text-align: center; 
 }
 /*BUTTONS */
 
@@ -222,6 +227,7 @@ article a:hover, article a:active {
   box-sizing: border-box;
   width: 100%;
   text-align: center;
+  color: #fff;
   font-size: 1em;
   padding: 20px 15px;
   margin-top: 15px;
