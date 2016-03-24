@@ -12,7 +12,7 @@ var passportConfig = require('./passportConfig.js')
 //Express App 
 var app = express()
 
-/** Express Session Setup **/
+// Express Session Setup 
 var session = require('express-session')
 app.sessionMiddleware = session({
   secret: 'keyboard dog',
@@ -121,7 +121,7 @@ app.post('/api/stories', app.isAuthenticatedAjax, function(req, res){
         }) 	
      })
 
-//Updating a story
+//Updating a story - Not in use yet 
 app.post('/api/stories/:id', app.isAuthenticatedAjax, function(req, res){
 	console.log('Updating a story')
 })
@@ -144,7 +144,7 @@ app.post('api/users', app.isAuthenticatedAjax, function(req, res){
 	console.log('Creating a user')
 })
 
-//update user
+//update user - Not in use yet 
 app.post('api/users/:id', app.isAuthenticatedAjax, function(req, res){
 	console.log('Updating a user')
 })
@@ -222,7 +222,7 @@ app.post('/search', function(req, res){
 })
 
 //Creating Server and Listening
-//We need to configure local and production ports 
+//Remember to switch ports depending on local or not 
 var port = 80
 app.listen(port, function(){
 	console.log('The server is running away on ' + port)
